@@ -1,7 +1,19 @@
 <mat-card>
   <div class="container">
-    <form class="example-form">
-      
+    <form class="example-form" [formGroup]="formGroup" (ngSubmit)="submit()">
+      <div>
+        <mat-icon>person</mat-icon>
+        <input type="text" formControlName="email" placeholder="E-mail" />
+      </div>
+      <br />
+      <div>
+        <mat-icon>lock</mat-icon>
+        <input type="password" formControlName="senha" placeholder="Senha" />
+      </div>
+      <br />
+      <div>
+        <button mat-button type="submit" color="primary">Entrar</button>
+      </div>
     </form>
   </div>
 </mat-card>
